@@ -1,0 +1,133 @@
+/* Remove margens e paddings padrão de todos os elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Garante que padding e border façam parte do tamanho total */
+}
+
+/* Estilos globais do corpo da página */
+body {
+    background-color: #141414; /* Fundo escuro Netflix */
+    color: #ffffff; /* Texto branco */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fonte padrão */
+    overflow-x: hidden; /* Remove scroll horizontal */
+}
+
+/* Estilos do header fixo no topo */
+header {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, transparent 100%); /* Gradiente escuro transparente */
+    padding: 20px 50px; /* Espaçamento interno */
+    position: fixed; /* Fica fixo no topo */
+    width: 100%; /* Ocupa toda a largura */
+    top: 0; /* Posiciona no topo */
+    z-index: 1000; /* Fica acima de outros elementos */
+    text-align: center; /* Centraliza o texto */
+}
+
+/* Título principal do header */
+header h1 {
+    color: #e50914; /* Vermelho Netflix */
+    font-size: 28px; /* Tamanho da fonte */
+    font-weight: bold; /* Texto em negrito */
+    letter-spacing: 2px; /* Espaço entre letras */
+}
+
+/* Estilos da área principal */
+main {
+    padding-top: 100px; /* Espaço superior para não cobrir o header fixed */
+    display: flex; /* Ativa flexbox */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    min-height: 100vh; /* Altura mínima da tela */
+}
+
+/* Container para organizar conteúdo */
+.container {
+    padding: 80px 50px 50px; /* Espaçamento interno */
+}
+
+/* Título de seções */
+.section-title {
+    font-size: 24px; /* Tamanho da fonte */
+    margin: 40px 0 20px; /* Espaçamento externo */
+    font-weight: 600; /* Peso da fonte */
+}
+
+/* Carrossel de perfis */
+.carousel {
+    display: flex; /* Ativa flexbox */
+    gap: 15px; /* Espaço entre items */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: flex-start; /* Alinha ao topo */
+    flex-wrap: wrap; /* Permite quebra de linha */
+    padding: 20px 50px; /* Espaçamento interno */
+    scroll-behavior: smooth; /* Scroll suave */
+}
+
+/* Estilo da barra de scroll horizontal */
+.carousel::-webkit-scrollbar {
+    height: 8px; /* Altura da barra */
+}
+
+/* Trilha da barra de scroll */
+.carousel::-webkit-scrollbar-track {
+    background: #333333; /* Cor de fundo da trilha */
+}
+
+/* Polegar da barra de scroll */
+.carousel::-webkit-scrollbar-thumb {
+    background: #e50914; /* Cor vermelha Netflix */
+    border-radius: 4px; /* Cantos arredondados */
+}
+
+/* Card individual de perfil */
+.card {
+    display: flex; /* Ativa flexbox */
+    flex-direction: column; /* Itens em coluna */
+    min-width: 150px; /* Largura mínima */
+    border-radius: 12px; /* Cantos arredondados */
+    cursor: pointer; /* Cursor em forma de mão */
+    transition: all 0.3s ease; /* Animação suave */
+    position: relative; /* Posicionamento relativo */
+    overflow: visible; /* Não corta o conteúdo */
+    flex-shrink: 0; /* Não comprime os cards */
+}
+
+/* Efeito no hover do card */
+.card:hover {
+    transform: scale(1.08); /* Aumenta 8% o tamanho */
+}
+
+/* Imagem do card */
+.card img {
+    width: 150px; /* Largura fixa */
+    height: 225px; /* Altura fixa */
+    object-fit: cover; /* Preenche o espaço sem distorcer */
+    border-radius: 12px; /* Cantos arredondados */
+    display: block; /* Remove espaço em branco */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.8); /* Sombra */
+}
+
+/* Sombra maior no hover da imagem */
+.card:hover img {
+    box-shadow: 0 8px 20px rgba(229, 9, 20, 0.6); /* Sombra vermelha maior */
+}
+
+/* Legenda do card (nome do perfil) */
+figcaption {
+    color: #ffffff; /* Texto branco */
+    text-align: center; /* Centraliza o texto */
+    padding: 10px 0; /* Espaçamento interno */
+    font-size: 14px; /* Tamanho da fonte */
+    font-weight: 500; /* Peso da fonte */
+}
+
+/* Footer da página */
+footer {
+    background-color: #000000; /* Fundo preto */
+    padding: 40px 50px; /* Espaçamento interno */
+    margin-top: 60px; /* Espaço superior */
+    text-align: center; /* Centraliza o texto */
+    color: #808080; /* Texto cinza */
+    font-size: 14px; /* Tamanho da fonte */
+}
